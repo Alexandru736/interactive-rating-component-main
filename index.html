@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
 
   <title>Frontend Mentor | Interactive rating component</title>
 
@@ -30,11 +31,11 @@
         to help us improve our offering!
       </p>
       <ul aria-label="rating-list" class="rating-list">
-        <li class="rating-item" aria-label="1">1</li>
-        <li class="rating-item" aria-label="2">2</li>
-        <li class="rating-item" aria-label="3">3</li>
-        <li class="rating-item" aria-label="4">4</li>
-        <li class="rating-item" aria-label="5">5</li>
+        <li class="rating-item" aria-label="1" aria-selected="false">1</li>
+        <li class="rating-item" aria-label="2" aria-selected="false">2</li>
+        <li class="rating-item" aria-label="3" aria-selected="false">3</li>
+        <li class="rating-item" aria-label="4" aria-selected="false">4</li>
+        <li class="rating-item" aria-label="5" aria-selected="false">5</li>
       </ul>
       <button 
         class="submit-button" 
@@ -45,8 +46,9 @@
       </button>
     </div>
     <div class="thank-you-container" aria-hidden="true">
+      <img class="thank-you-image" src="images/illustration-thank-you.svg" alt="thank-you-ilustration">
       <h2 class="rating-result">You selected <span class="rating-value">4</span> out of 5</h2>
-      <h1 class="thank-you">Thank you!</h1>
+      <h1 class="thank-you-title">Thank you!</h1>
       <p class="thank-you-message">
         We appreciate you taking the time to give a rating. If you ever need more support,
         don’t hesitate to get in touch!
@@ -55,7 +57,7 @@
   </main>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/Alexandru736/interactive-rating-component-main">Alex Ionita</a>.
   </footer>
 </body>
 </html>

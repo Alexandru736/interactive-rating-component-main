@@ -70,8 +70,12 @@ body {
                     cursor: pointer;
                 }
 
-                .rating-item:hover {
+                .rating-item[aria-selected="true"] {
                     background-color: $clr-neutral-1;
+                }
+
+                .rating-item:hover {
+                    background-color: $clr-primary;
                 }
             }
 
@@ -99,6 +103,39 @@ body {
 
         .thank-you-container {
             background-color: $clr-neutral-3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2.5rem;
+            width: 100%;
+            border-radius: 20px;
+            gap: 1rem;
+
+            .thank-you-image {
+                width: 60%;
+            }
+
+            .rating-result {
+                font-size: .9rem;
+                font-weight: $regular-weight;
+                padding: .75rem;
+                background-color: lighten($clr-neutral-4, 15);
+                border-radius: 30px;
+                margin-bottom: .5rem;
+            }
+
+            .thank-you-title {
+                color: $clr-neutral-1;
+                font-size: 1.5rem;
+            }
+
+            .thank-you-message {
+                font-size: .8rem;
+                text-align: center;
+                color: $clr-neutral-2;
+                line-height: 1.2rem;
+            }
         }
 
         .thank-you-container[aria-hidden="true"] {
@@ -108,5 +145,14 @@ body {
 
     footer {
         display: none;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        footer {
+            display: block;
+        }
     }
 }
