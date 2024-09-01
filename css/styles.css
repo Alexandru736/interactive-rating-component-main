@@ -1,0 +1,108 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  font-family: "Overpass";
+  font-weight: 400;
+  color: hsl(25, 97%, 53%);
+}
+
+body {
+  background-color: hsl(216, 12%, 8%);
+  height: calc(100vh - 1px);
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 320px;
+}
+body main .rating-container {
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+body main .rating-container .icon-container {
+  background-color: #343942;
+  background-image: url("../images/icon-star.svg");
+  background-repeat: no-repeat;
+  background-size: 35%;
+  border-radius: 50%;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+}
+body main .rating-container .title {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+body main .rating-container .description {
+  font-size: 0.9rem;
+  color: hsl(217, 12%, 63%);
+  line-height: 1.4rem;
+}
+body main .rating-container .rating-list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-around;
+}
+body main .rating-container .rating-list .rating-item {
+  background-color: #343942;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-content: center;
+  color: hsl(217, 12%, 63%);
+  font-weight: 700;
+  cursor: pointer;
+}
+body main .rating-container .rating-list .rating-item:hover {
+  background-color: hsl(0, 0%, 100%);
+}
+body main .rating-container .submit-button {
+  outline: none;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(213, 19%, 18%);
+  padding: 1rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+}
+body main .rating-container .submit-button:hover {
+  background-color: hsl(0, 0%, 100%);
+}
+body main .rating-container[aria-hidden=true] {
+  display: none;
+}
+body main .thank-you-container {
+  background-color: hsl(213, 19%, 18%);
+}
+body main .thank-you-container[aria-hidden=true] {
+  display: none;
+}
+body footer {
+  display: none;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,112 @@
+@import "variables";
+@import "globals";
+
+body {
+    background-color: $clr-neutral-4;
+    height: calc(100vh - 1px);
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: .75rem;
+        width: 100%;
+        max-width: 320px;
+
+        .rating-container {        
+            background-color: $clr-neutral-3;
+            border-radius: 20px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 100%;
+
+            .icon-container {
+                background-color: lighten($clr-neutral-4, 15);
+                background-image: url('../images/icon-star.svg');
+                background-repeat: no-repeat;
+                background-size: 35%;
+                border-radius: 50%;
+                background-position: center;
+                width: 40px;
+                height: 40px;
+            }
+
+            .title {
+                color: $clr-neutral-1;
+                font-size: 1.5rem;
+                font-weight: $bold-weight;
+            }
+
+            .description {
+                font-size: .9rem;
+                color: $clr-neutral-2;
+                line-height: 1.4rem;
+            }
+
+            .rating-list {
+                display: flex;
+                list-style: none;
+                gap: 1rem;
+                align-items: center;
+                justify-content: space-around;
+
+                .rating-item {
+                    background-color: lighten($clr-neutral-4, 15);
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                    display: grid;
+                    place-content: center;
+                    color: $clr-neutral-2;
+                    font-weight: $bold-weight;
+                    cursor: pointer;
+                }
+
+                .rating-item:hover {
+                    background-color: $clr-neutral-1;
+                }
+            }
+
+            .submit-button {
+                outline: none;
+                background-color: $clr-primary;
+                color: $clr-neutral-3;
+                padding: 1rem;
+                border-radius: 30px;
+                font-weight: $bold-weight;
+                font-size: 1.2rem;
+                letter-spacing: .1rem;
+                margin-bottom: .7rem;
+                cursor: pointer;
+            }
+
+            .submit-button:hover {
+                background-color: $clr-neutral-1;
+            }
+        }
+
+        .rating-container[aria-hidden="true"] {
+            display: none;
+        }
+
+        .thank-you-container {
+            background-color: $clr-neutral-3;
+        }
+
+        .thank-you-container[aria-hidden="true"] {
+            display: none;
+        }
+    }
+
+    footer {
+        display: none;
+    }
+}
