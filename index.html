@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,35 +19,43 @@
   </style>
 </head>
 <body>
-
-  <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
+  <main>
+    <div class="rating-container" aria-hidden="false">
+      <div class="icon-container">
+      </div>
+      <!-- Rating state start -->
+      <h1 class="title" aria-label="Rating Title">How did we do?</h1>
+      <p class="description" aria-label="Rating Description">
+        Please let us know how we did with your support request. All feedback is appreciated
+        to help us improve our offering!
+      </p>
+      <ul aria-label="rating-list" class="rating-list">
+        <li class="rating-item" aria-label="1">1</li>
+        <li class="rating-item" aria-label="2">2</li>
+        <li class="rating-item" aria-label="3">3</li>
+        <li class="rating-item" aria-label="4">4</li>
+        <li class="rating-item" aria-label="5">5</li>
+      </ul>
+      <button 
+        class="submit-button" 
+        aria-expanded="false" 
+        aria-haspopup="dialog" 
+        aria-label="Submit Button">
+        SUBMIT
+      </button>
+    </div>
+    <div class="thank-you-container" aria-hidden="true">
+      <h2 class="rating-result">You selected <span class="rating-value">4</span> out of 5</h2>
+      <h1 class="thank-you">Thank you!</h1>
+      <p class="thank-you-message">
+        We appreciate you taking the time to give a rating. If you ever need more support,
+        don’t hesitate to get in touch!
+      </p>
+    </div>
+  </main>
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
 </body>
 </html>
