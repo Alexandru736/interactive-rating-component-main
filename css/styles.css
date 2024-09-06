@@ -76,7 +76,7 @@ body main .rating-container .rating-list .rating-item {
   font-weight: 700;
   cursor: pointer;
 }
-body main .rating-container .rating-list .rating-item[aria-selected=true] {
+body main .rating-container .rating-list .rating-item[aria-checked=true] {
   background-color: hsl(0, 0%, 100%);
 }
 body main .rating-container .rating-list .rating-item:hover {
