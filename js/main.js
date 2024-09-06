@@ -14,9 +14,9 @@ submitButton.addEventListener('click', () => submitHandler());
 
 function ratingItemHandler(e) {
     ratingItems.forEach(ratingItem => {
-        ratingItem.setAttribute('aria-selected', 'false');
+        ratingItem.setAttribute('aria-checked', 'false');
         if(e.currentTarget === ratingItem) {
-            ratingItem.setAttribute('aria-selected', 'true');
+            ratingItem.setAttribute('aria-checked', 'true');
             rating = parseInt(e.currentTarget.textContent);
         }
     });
